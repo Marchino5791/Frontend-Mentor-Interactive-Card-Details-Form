@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Interactive card details form</title>
 </head>
+
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <div class="decorative-part">
+    <div class="cards">
+      <div class="card-front">
+        <img src="images/bg-card-front.png" alt="" class="card-front__img img--misure">
+        <div class="card-front__container">
+          <img src="images/card-logo.svg" alt="" class="card-front__container__logo ">
+          <span id="card-front__number">0000 0000 0000 0000</span>
+          <div class="card-front__container__info">
+            <span id="card-front__name">
+              Jane Appleseed
+            </span>
+            <span class="card-front__container__info__date">
+              <span id="card-front__month">00</span><span>/</span><span
+                id="card-front__year">00</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card-back">
+        <img src="images/bg-card-back.png" alt="" class="card-back__img img--misure">
+        <span id="card-back__cvc">000</span>
+      </div>
 
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
+
+  <main>
+
+    <form action="/" method="post" class="form">
+
+      <div class="box">
+        <label for="cardholder-name">
+          Cardholder Name
+        </label>
+        <input id="cardholder-name" type="text" name="name" placeholder="e.g. Jane Appleseed">
+        <div id="cardholder-name-error" class="error-message hidden">Can't be blank</div>
+      </div>
+
+      <div class="box">
+        <label for="card-number">
+          Card Number
+        </label>
+        <input id="card-number" type="text" name="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+        <div id="card-number-error" class="error-message hidden"></div>
+      </div>
+
+      <div class="half-box">
+        <label for="expire-date">
+          Exp. Date (MM/YY)
+        </label>
+        <input id="month" type="text" aria-labelledby="expire-date" name="month" placeholder="MM" maxlength="2">
+        <input id="year" type="text" aria-labelledby="expire-date" name="year" placeholder="YY" maxlength="2">
+        <div id="month-error" class="error-message hidden">Can't be blank</div>
+        <div id="year-error" class="error-message hidden">Can't be blank</div>
+      </div>
+
+
+      <div class="half-box">
+        <label for="cvc">
+          CVC
+        </label>
+        <input id="cvc" type="text" name="cvc" placeholder="e.g. 123" maxlength="3">
+        <div id="cvc-error" class="error-message hidden">Can't be blank</div>
+      </div>
+
+      <div class="box">
+        <button type="submit" id="confirm">Confirm</button>
+      </div>
+
+    </form>
+
+
+    <div class="thanks-container hidden">
+      <img src="images/icon-complete.svg" alt="check" class="thanks-container-img" aria-hidden="true">
+      <p class="thanks-container-primary">Thank you!</p>
+      <p class="thanks-container-secondary">We've added your card details</p>
+      <button id="continue">Continue</button>
+    </div>
+  </main>
+
+  <!-- 
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Marchino5791">Marco Paolino</a>.
+  </footer> 
+  -->
+
+  <script src="script.js"></script>
 </body>
+
 </html>
