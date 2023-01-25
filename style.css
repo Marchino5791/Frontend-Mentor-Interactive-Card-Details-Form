@@ -29,11 +29,10 @@ svg {
 :root {
     --active-input: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)); 
     --input-errors: hsl(0, 100%, 66%);
-    --card-text: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
     --primary-text: hsl(278, 68%, 11%);
     --secondary-text: hsl(279, 6%, 55%);
-    --placeholder: hsl(270, 3%, 87%);
-
+    --card-text: hsl(270, 3%, 87%);
 }
 
 body {
@@ -64,10 +63,6 @@ body {
     transform: translateX(-25%);
 }
 
-.card-front__img {}
-
-.card-front__container {}
-
 .img--misure {
     width: 27.9375rem;
     height: 15.3125rem;
@@ -75,8 +70,8 @@ body {
 
 .card-front__container__logo {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 1.75rem;
+    left: 2rem;
     width: 5.25rem;
     height: 2.9375rem;
 }
@@ -134,14 +129,15 @@ form {
     margin: 0 auto;
 }
 
-label {
+label, .expire-date {
     color: var(--primary-text);
-    display: block;
+    display: inline;
     margin-bottom: .5rem;
     grid-column: 1 / -1;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 2px;
+    font-weight: 600;
 }
 
 input {
@@ -150,7 +146,7 @@ input {
     height: 3rem;
     padding-left: 1rem;
     border-radius: 8px;
-    border: 1px solid var(--placeholder);
+    border: 1px solid var(--secondary-text);
     font-size: 18px;
 }
 
@@ -162,7 +158,7 @@ input[type=text]:focus {
 }
 
 ::placeholder {
-    color: var(--placeholder);
+    color: var(--secondary-text);
 }
 
 .box {
@@ -193,11 +189,11 @@ button {
     background-color: var(--primary-text);
     color: var(--card-text);
     width: 100%;
-    height: 3rem;
+    height: 3.5rem;
     border-radius: 8px;
     margin-top: 1rem;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
 }
 

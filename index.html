@@ -18,7 +18,7 @@
 
 <body>
 
-  <div class="decorative-part">
+  <aside class="decorative-part">
     <div class="cards">
       <div class="card-front">
         <img src="images/bg-card-front.png" alt="" class="card-front__img img--misure">
@@ -42,7 +42,7 @@
       </div>
 
     </div>
-  </div>
+  </aside>
 
   <main>
 
@@ -65,11 +65,11 @@
       </div>
 
       <div class="half-box">
-        <label for="expire-date">
-          Exp. Date (MM/YY)
-        </label>
-        <input id="month" type="text" aria-labelledby="expire-date" name="month" placeholder="MM" maxlength="2">
-        <input id="year" type="text" aria-labelledby="expire-date" name="year" placeholder="YY" maxlength="2">
+        <span class="expire-date">
+          Exp. Date (<label for="month">MM</label>/<label for="year">YY</label>)
+        </span>
+        <input id="month" type="text" name="month" placeholder="MM" maxlength="2">
+        <input id="year" type="text" name="year" placeholder="YY" maxlength="2">
         <div id="month-error" class="error-message hidden">Can't be blank</div>
         <div id="year-error" class="error-message hidden">Can't be blank</div>
       </div>
